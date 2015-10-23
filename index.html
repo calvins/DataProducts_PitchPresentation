@@ -31,10 +31,13 @@
     
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/logo.jpg">
+  </aside>
   <hgroup class="auto-fadein">
     <h1>Predict the age of abalone</h1>
-    <h2></h2>
-    <p>Calvin Seto<br/></p>
+    <h2>Good Eats</h2>
+    <p>Calvin Seto<br/>Data Scientist</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,69 +46,69 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Slide 1</h2>
+    <h2>Background</h2>
   </hgroup>
   <article data-timings="">
-    <p>Just enter</p>
-
-<ol>
-<li>infant or non-infant</li>
-<li>mean abalone size (length, diameter, and height)</li>
-<li>shucked weight</li>
-<li>shell weight</li>
-</ol>
+    <ul>
+<li><p>To some Chinese people, Abalone is a food you eat at special occasions like wedding banquets mostly because it is expensive.</p></li>
+<li><p>Texturally, it&#39;s right between a scallop and squid with a crunchiness similar to a conch but closest to the sensation you get eating jellyfish.</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>You need the AbaloneApp</h2>
   </hgroup>
   <article data-timings="">
-    <p>Then click Go</p>
+    <ul>
+<li><p>If you&#39;re going to eat abalone, the most important thing to remember is your wallet.  One of the largest can set you back more than $20.</p></li>
+<li><p>You can use the AbaloneApp to predict the age of the abalone you want to eat and get the most value from your hard earned dollars!</p></li>
+<li><p>Sample prediciton</p></li>
+</ul>
+
+<pre><code class="r"># best fit multiple regression model
+abfit7.2 = lm(log(rings) ~ sex + log(size.mean) + weight.s + weight.sh, data = abalone)
+
+p &lt;- predict(abfit7.2, newdata = data.frame(sex = &quot;K&quot;, size.mean = 0.38,
+                                            weight.s = 0.45, weight.sh = 0.35))
+round(exp(p),0)
+</code></pre>
+
+<pre><code>##  1 
+## 12
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>How to use the AbaloneApp</h2>
   </hgroup>
   <article data-timings="">
-    <p>and your predicted abalone age will appear</p>
+    <p>Simply specify if it&#39;s an infant or non-infant, mean abalone size, shucked weight, and shell weight and click Go!</p>
+
+<p><img src="assets/img/AbaloneAppMainScreen60.png" alt="AbaloneApp Main Screen"></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Results</h2>
   </hgroup>
   <article data-timings="">
-    <p>with a fortune</p>
+    <p>Your abalone&#39;s predicted age will appear with a fortune and a picture!</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<p>So go to <a href="https://calvinsbiz.shinyapps.io/AbaloneApp">https://calvinsbiz.shinyapps.io/AbaloneApp</a> now!</p>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 5</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>and picture of the number of rings for your abalone!</p>
+<p><img src="assets/img/AbaloneAppMainScreen260.png" alt="AbaloneApp Main Screen2"></p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <article data-timings="">
-    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -116,38 +119,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 1'>
+        data-slide=1 title='Background'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='You need the AbaloneApp'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='How to use the AbaloneApp'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 4'>
+        data-slide=4 title='Results'>
          4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 5'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='NA'>
-         6
       </a>
     </li>
   </ul>
